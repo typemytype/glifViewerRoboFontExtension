@@ -28,7 +28,7 @@
 	<key>timeStamp</key>
 	<real>1320533587.198683</real>
 	<key>version</key>
-	<string>1.1</string>
+	<string>1.2</string>
 	<key>requiresVersionMajor</key>
 	<string>1</string>
 	<key>requiresVersionMinor</key>
@@ -39,6 +39,6 @@
 		<string>typemytype/glifViewerRoboFontExtension</string>
 		<key>summary</key>
 		<string>View and edit the current glyph .glif data.</string>
-	</dict
+	</dict>
 </dict>
 </plist>
