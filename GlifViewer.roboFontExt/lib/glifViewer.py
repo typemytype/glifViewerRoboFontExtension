@@ -12,15 +12,16 @@ from mojo.roboFont import CurrentGlyph, OpenWindow, RGlyph
 def PlistFactory(glyph):
     def drawPoints(pointPen):
         for contour in glyph:
+            isOpen = contour.open
             pointPen.beginPath(identifier=contour.identifier)
             contourLenght = len(contour)
             for index, point in enumerate(contour):
-                if point.segmentType is None and index == contourLenght - 1:
+                if isOpen and point.segmentType is None and index == contourLenght - 1:
                     continue
                 pointPen.addPoint((point.x, point.y), segmentType=point.segmentType, smooth=point.smooth, name=point.name, identifier=point.identifier)
             pointPen.endPath()
         for component in glyph.components:
-            component.drawPoint(pointPen)
+            component.drawPoints(pointPen)
     return writeGlyphToString(glyph.name, glyph, drawPoints)
 
 
