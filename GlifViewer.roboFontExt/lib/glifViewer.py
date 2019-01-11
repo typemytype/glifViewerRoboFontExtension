@@ -51,7 +51,7 @@ class GlyphXMLViewer(BaseWindowController):
         if self.currentGlyph is not None:
             xml = self.w.xml.get()
 
-            dummyGlyph = RGlyph()
+            dummyGlyph = RGlyph().naked()
             try:
                 readGlyphFromString(str(xml), dummyGlyph, dummyGlyph.getPointPen())
             except Exception:
@@ -62,7 +62,7 @@ class GlyphXMLViewer(BaseWindowController):
                 return
 
             self.currentGlyph.clear()
-            readGlyphFromString(str(xml), self.currentGlyph, self.currentGlyph.getPointPen())
+            readGlyphFromString(str(xml), self.currentGlyph.naked(), self.currentGlyph.naked().getPointPen())
 
     def setXML(self):
         if self.currentGlyph is not None:
