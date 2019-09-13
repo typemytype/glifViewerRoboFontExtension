@@ -1,6 +1,6 @@
 import vanilla
 from defconAppKit.windows.baseWindow import BaseWindowController
-from ufoLib.glifLib import writeGlyphToString, readGlyphFromString
+from fontTools.ufoLib.glifLib import writeGlyphToString, readGlyphFromString
 
 import defcon
 
