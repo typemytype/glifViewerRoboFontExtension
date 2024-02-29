@@ -1,0 +1,14 @@
+name: Glif Viewer
+developer: TypeMyType
+developerURL: http://www.typemytype.com
+launchAtStartUp: false
+mainScript: ''
+version: '1.7'
+addToMenu:
+- path: glifViewer.py
+  preferredName: Glif Viewer
+  shortKey: ''
+html: false
+timeStamp: 1320533587.198683
+requiresVersionMajor: '3'
+requiresVersionMinor: '0'
